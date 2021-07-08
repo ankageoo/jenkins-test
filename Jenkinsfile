@@ -4,21 +4,21 @@ pipeline {
     stage('build') {
       steps {
         echo 'Building'
-        sh 'jenkins/build/build.sh'
+        sh 'jenkins/build.sh'
       }
     }
 
     stage('test') {
       steps {
         echo 'Testing'
-        sh 'jenkins/test/test.sh'
+        sh 'jenkins/test.sh'
       }
     }
 
     stage('deploy') {
       steps {
         echo 'Deploying'
-        sh 'jenkins/deploy/deploy.sh'
+        sh 'jenkins/deploy.sh'
       }
     }
 
