@@ -5,7 +5,6 @@ pipeline {
       steps {
         echo 'Building'
         sh 'jenkins/build.sh'
-        echo $?
       }
     }
 
@@ -13,7 +12,6 @@ pipeline {
       steps {
         echo 'Testing'
         sh 'jenkins/test.sh'
-        echo $?
       }
     }
 
@@ -21,7 +19,6 @@ pipeline {
       steps {
         echo 'Deploying'
         sh 'jenkins/deploy.sh'
-        echo $?
       }
     }
 
